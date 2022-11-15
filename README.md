@@ -1,7 +1,7 @@
 # ⚡Vite + Redux + TypeScript를 이용하여 만든 숫자 증가 예제
 
 :octocat: https://light9639.github.io/Redux-TypeScript/
-![K-001](https://user-images.githubusercontent.com/95972251/201255285-df399ac8-54f4-4c3b-ac02-8a74c542581d.png)
+![127 0 0 1_5500_dist_index html](https://user-images.githubusercontent.com/95972251/201822840-e37b018c-2b3b-486e-a661-d18a9789f96d.png)
 
 :sparkles: Redux, TypeScript를 이용한 숫자 증가 예제입니다. :sparkles:
 
