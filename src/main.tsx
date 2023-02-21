@@ -6,11 +6,11 @@ import './index.css'
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 
-const 초기값 = { count: 0, user: 'kim' };
+const initialState = { count: 0, user: 'kim' };
 
 const counterSlice = createSlice({
   name: 'counter',
-  initialState: 초기값,
+  initialState: initialState,
   reducers: {
     increment(state) {
       state.count += 1
