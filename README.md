@@ -108,4 +108,4 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 )
 ```
 ## 📎 출처
-- <a href="https://codingapple.com/course/typescript-crash-course/">[] 빠르게 마스터하는 타입스크립트</a>
+- <a href="https://codingapple.com/course/typescript-crash-course/">[코딩애플] 빠르게 마스터하는 타입스크립트</a>
