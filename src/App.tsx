@@ -3,9 +3,10 @@ import './App.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState, increment } from './main'
 import React from './assets/react.svg'
-function App() {
 
-  const 꺼내온거 = useSelector((state: RootState) => state);
+export default function App(): JSX.Element {
+
+  const Item = useSelector((state: RootState) => state);
   const dispatch = useDispatch();
 
   return (
@@ -20,7 +21,7 @@ function App() {
       </div>
       <h1>React + Redux</h1>
       <div style={{ marginTop: "50px" }}>
-        <button onClick={() => { dispatch(increment()) }}>Count is {꺼내온거.counter1.count}</button>
+        <button onClick={() => { dispatch(increment()) }}>Count is {Item.counter1.count}</button>
       </div>
       <div className="card">
         <p>
@@ -33,5 +34,3 @@ function App() {
     </div>
   );
 }
-
-export default App
