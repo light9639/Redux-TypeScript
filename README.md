@@ -1,4 +1,4 @@
-# ⚡Vite + Redux + TypeScript를 이용하여 만든 숫자 증가 예제
+# ⚗️ Vite + Redux + TypeScript를 이용하여 만든 숫자 증가 예제
 
 :octocat: https://light9639.github.io/Redux-TypeScript/
 ![127 0 0 1_5500_dist_index html](https://user-images.githubusercontent.com/95972251/201822840-e37b018c-2b3b-486e-a661-d18a9789f96d.png)
@@ -26,28 +26,35 @@ yarn add redux react-redux @reduxjs/toolkit
 
 ## ✒️ App.tsx, main.tsx 작성
 ### :zap: App.tsx
+- `react-redux`에서 `useDispatch`, `useSelector`를 가져온다.
+- `useDispatch`는 리덕스 파일안에 함수를 사용할 때 사용하며, `useSelector`는 데이터 값을 가져올 때 사용한다.
+- 따라서 `onClick={() => { dispatch(increment()) }`이 포함된 버튼을 클릭하면 {Item.counter1.count}의 데이터값이 증가하게 된다.
 ```bash
 import { useState } from 'react'
 import './App.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState, increment } from './main'
 
-function App() {
+export default function App(): JSX.Element {
 
-  const 꺼내온거 = useSelector((state: RootState) => state);
+  const Item = useSelector((state: RootState) => state);
   const dispatch = useDispatch();
 
   return (
     <div className="App">
-      {꺼내온거.counter1.count}
-      <button onClick={() => { dispatch(increment()) }}>버튼</button>
+      {...options}
+      
+      <div style={{ marginTop: "50px" }}>
+        <button onClick={() => { dispatch(increment()) }}>Count is {Item.counter1.count}</button>
+      </div>
+      
+      {...options}
     </div>
   );
 }
-
-export default App
 ```
 ### :zap: main.tsx
+- `counterSlice`
 ```bash
 import React from 'react'
 import ReactDOM from 'react-dom/client'
@@ -57,11 +64,11 @@ import './index.css'
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 
-const 초기값 = { count: 0, user: 'kim' };
+const initialState = { count: 0, user: 'kim' };
 
 const counterSlice = createSlice({
   name: 'counter',
-  initialState: 초기값,
+  initialState: initialState,
   reducers: {
     increment(state) {
       state.count += 1
