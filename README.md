@@ -29,7 +29,7 @@ yarn add redux react-redux @reduxjs/toolkit
 - `react-redux`에서 `useDispatch`, `useSelector`를 가져온다.
 - `useDispatch`는 리덕스 파일안에 함수를 사용할 때 사용하며, `useSelector`는 데이터 값을 가져올 때 사용한다.
 - `useSelector`를 이용할 때는 `RootState`라는 `main.tsx`에서 정의한 타입명을 입력해야 오류가 생기지 않는다.
-- 따라서 `onClick={() => { dispatch(increment()) }`이 포함된 버튼을 클릭하면 {Item.counter1.count}의 데이터값이 증가하게 된다.
+- 따라서 `onClick={() => { dispatch(increment()) }`이 포함된 버튼을 클릭하면 `{Item.counter1.count}`의 데이터값이 증가하게 된다.
 ```bash
 import { useState } from 'react'
 import './App.css'
